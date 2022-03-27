@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+	name: {{ .name }}
+spec:
+	selector:
+	app: {{ .max_cpu }}
+	ports:
+	- port: {{ envOr "APP_PORT" "80" }}
+		targetPort: go-app
+	type: ClusterIP

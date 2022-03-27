@@ -1,0 +1,15 @@
+version: beta
+
+profiles:
+  default:
+    name: test-app-default
+    max_cpu: 2
+  dev:
+    name: test-app-dev
+    max_cpu: 0.25
+  staging:
+    name: test-app-staging
+    max_cpu: 0.5
+  prod:
+    name: test-app-prod
+    max_cpu: 1
